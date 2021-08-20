@@ -24,25 +24,25 @@
                         <!-- memory -->
                         <div id="memory-container">
                             <h6>Memory</h6>
-                            <div>
-                                <button class="btn btn-outline-secondary me-2">8GB unified memory</button>
-                                <button class="btn btn-outline-secondary">16GB unified memory</button>
+                            <div id="memory">
+                                <button id="eight-GB" class="btn btn-outline-secondary me-2">8GB unified memory</button>
+                                <button id="sixteen-GB" class="btn btn-outline-secondary">16GB unified memory</button>
                             </div>
                         </div>
                         <!-- storage -->
                         <div id="storage-container" class="py-3">
                             <h6>Storage</h6>
-                            <button class="btn btn-outline-secondary me-2">256GB SSD storage</button>
-                            <button class="btn btn-outline-secondary me-2">512GB SSD storage</button>
-                            <button class="btn btn-outline-secondary me-2">1TB SSD storage</button>
+                            <button id="ssd-256" class="btn btn-outline-secondary me-2">256GB SSD storage</button>
+                            <button id="ssd-512" class="btn btn-outline-secondary me-2">512GB SSD storage</button>
+                            <button id="ssd-1tb" class="btn btn-outline-secondary me-2">1TB SSD storage</button>
                         </div>
                         <!--deliver option-->
-                        <div id="storage-container" class="pb-3">
+                        <div id="delivery-container" class="pb-3">
                             <h6>Choose your delivery option</h6>
-                            <button class="btn btn-outline-secondary me-2">Friday,Aug 25 FREE Prime Delivery</button>
-                            <button class="btn btn-outline-secondary me-2">Friday,Aug 21 Delilvery charge $20</button>
+                            <button id="delivery-zero" class="btn btn-outline-secondary me-2">Friday,Aug 25 FREE Prime Delivery</button>
+                            <button id="delivery-twenty" class="btn btn-outline-secondary me-2">Friday,Aug 21 Delilvery charge $20</button>
                         </div>
-                        <!-- total price -->
+                        <!-- differnt price -->
                         <div id="calculation-section" class="my-3">
                             <!-- best price -->
                             <div class="row align-items-center border-bottom w-50 py-1">
@@ -50,7 +50,7 @@
                                     <h6>Best Price </h6>
                                 </div>
                                 <div class="col-4">
-                                    <h6>$<span>1299</span></h6>
+                                    <h6>$<span id="best-price">1299</span></h6>
                                 </div>
                             </div>
                             <!-- extra memory cost -->
@@ -59,7 +59,7 @@
                                     <h6>Extra Memory Cost</h6>
                                 </div>
                                 <div class="col-4">
-                                    <h6>$<span>0</span></h6>
+                                    <h6>$<span id="memory-cost">0</span></h6>
                                 </div>
                             </div>
                             <!-- extra storage cost -->
@@ -68,7 +68,7 @@
                                     <h6>Extra Storage Cost</h6>
                                 </div>
                                 <div class="col-4">
-                                    <h6>$<span>0</span></h6>
+                                    <h6>$<span id="storage-cost">0</span></h6>
                                 </div>
                             </div>
                             <!-- delivery charge -->
@@ -77,7 +77,7 @@
                                     <h6>Delivery Charge</h6>
                                 </div>
                                 <div class="col-4">
-                                    <h6>$<span>0</span></h6>
+                                    <h6>$<span id="delivery-charge">0</span></h6>
                                 </div>
                             </div>
                             <!-- total calculated price -->
@@ -86,7 +86,7 @@
                                     <h6 class="fw-bold">Total Price </h6>
                                 </div>
                                 <div class="col-4">
-                                    <h6 class="fw-bold">$<span>1299</span></h6>
+                                    <h6 class="fw-bold">$<span id="total-cost">1299</span></h6>
                                 </div>
                             </div>
                         </div>
