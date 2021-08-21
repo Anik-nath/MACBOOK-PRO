@@ -17,8 +17,8 @@ const applyButton = document.getElementById('apply-button');
 
 
 //convert all cost value 
-function convert(kartext){
-    const Text = kartext.innerText;
+function convert(textId){
+    const Text = textId.innerText;
     const convertValue = parseInt(Text);
     return convertValue;
 }
@@ -39,9 +39,9 @@ function click(whose,cost){
 }
 
 //event function for each button
-function another(id,kar,cost){
+function another(id,choice,price){
     id.addEventListener('click',function(){
-        click(kar,cost);
+        click(choice,price);
     })
 }
 another(eightGB,memoryCost,0)
@@ -51,18 +51,14 @@ another(SSD512,storageCost,100);
 another(SSD1TB,storageCost,180);
 another(deliveryZero,deliveryCharge,0);
 another(deliveryTwenty,deliveryCharge,20);
+
 //promo code
 applyButton.addEventListener('click',function(){
-    
     promoCodeValue = promoCode.value;
     if(promoCodeValue == 'stevekaku'){
-        console.log('matched');
         const previousTotal = convert(anotherTotal);
         const promoPrice = previousTotal - (previousTotal * 0.2);
         anotherTotal.innerText = promoPrice;
-        applyButton.setAttribute('disabled','')
-    }
-    else{
-        console.log('your promo code is not matched')
+        promoCode.value = '';
     }
 })
