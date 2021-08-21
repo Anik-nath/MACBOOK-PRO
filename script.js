@@ -47,7 +47,7 @@ function another(id,kar,cost){
 another(eightGB,memoryCost,0)
 another(sixteenGB,memoryCost,180);
 another(SSD256,storageCost,0);
-another(SSD512,storageCost,200);
+another(SSD512,storageCost,100);
 another(SSD1TB,storageCost,180);
 another(deliveryZero,deliveryCharge,0);
 another(deliveryTwenty,deliveryCharge,20);
@@ -58,9 +58,11 @@ applyButton.addEventListener('click',function(){
     if(promoCodeValue == 'stevekaku'){
         console.log('matched');
         const previousTotal = convert(anotherTotal);
-        console.log(previousTotal - (previousTotal * 0.20))
+        const promoPrice = previousTotal - (previousTotal * 0.2);
+        anotherTotal.innerText = promoPrice;
+        applyButton.setAttribute('disabled','')
     }
     else{
-        console.log('not')
+        console.log('your promo code is not matched')
     }
 })
