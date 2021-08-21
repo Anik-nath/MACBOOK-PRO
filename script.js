@@ -23,7 +23,7 @@ function convert(textId){
     return convertValue;
 }
 //calculation function
-function click(whose,cost){
+function calculate(whose,cost){
     whose.innerText = cost;
     //get all cost value
     const bestPriceValue = convert(bestPrice);
@@ -41,7 +41,7 @@ function click(whose,cost){
 //event function for each button
 function another(id,choice,price){
     id.addEventListener('click',function(){
-        click(choice,price);
+        calculate(choice,price);
     })
 }
 another(eightGB,memoryCost,0)
